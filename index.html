@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hermitage - Interactive A1</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="body">
+
+    <!--15th page-->
+    <div class="page" id="pagetransition11">
+        <img src="images/15bg-15.jpg" alt="bg" class="images">
+        <img src="images/0human-15.png" alt="someone" class="images" id="humanmove">
+        <button onclick="transition16()" class="button" id="next14"></button>
+        <script type="text/javascript">
+            function transition16() {
+                document.getElementById('pagetransition11').style.opacity = '0';
+                document.getElementById('pagetransition').style.opacity = '1';
+            }
+        </script>
+    </div>
+
+    <!--14th page-->
+    <div class="page" id="pagetransition10">
+        <img src="images/14bg-14.jpg" alt="bg" class="images">
+        <button onclick="transition15()" class="button" id="next13"></button>
+        <audio loop id="dreamy-piano" src="dreamy-piano-atmosphere.wav"></audio>
+
+        <script type="text/javascript">
+            function transition15() {
+                document.getElementById('pagetransition10').style.opacity = '0';
+                document.getElementById('next13').remove();
+                document.getElementById('next14').style.zIndex = "2";
+
+                var audio = document.getElementById("creepy-choir");
+                audio.pause();
+                var audio = document.getElementById("deep-choir");
+                audio.pause();
+                var audio = document.getElementById("dreamy-piano");
+                audio.play();
+            }
+        </script>
+    </div>
+
+    <!--10,11,12,13 page-->
+    <div class="page" id="pagetransition9">
+        <img src="images/10bg-10.jpg" alt="bg" class="images">
+        <img src="images/10clouds.png" alt="clouds" id="clouds">
+        <div id="tenfilter"></div>
+        <img src="images/10text-10.png" alt="and you, there, stranger in the sway of it," class="images" id="tentext">
+        <img src="images/11text-11.png" alt="what would you have done there, in the ruins" class="images"
+            id="eleventext">
+        <img src="images/12wings.png" alt="wings" class="images" id="wingA">
+        <img src="images/12wings.png" alt="wings" class="images" id="wingB">
+        <img src="images/12wings.png" alt="wings" class="images" id="wingC">
+        <img src="images/12wings.png" alt="wings" class="images" id="wingD">
+        <img src="images/11ruins-11.png" alt="ruins" class="images" id="ruins">
+        <img src="images/10human.png" alt="human" class="images" id="tenhuman">
+        <img src="images/10fg-10.png" alt="mountains" class="images">
+        <img src="images/11filter-11.png" alt="redfilter" class="images" id="filterE">
+        <img src="images/11filter-11.png" alt="redfilter" class="images" id="filterF">
+        <img src="images/11filter-11.png" alt="redfilter" class="images" id="filterG">
+        <img src="images/12text-12.png" alt="when the burning wings ascended," class="images" id="twelvetext">
+        <img src="images/13text-13.png" alt="when the ghosts shook the music from your branches" class="images"
+            id="thirteentext">
+        <img src="images/11filter-11.png" alt="redfilter" class="images" id="filterB">
+        <img src="images/11filter-11.png" alt="redfilter" class="images" id="filterC">
+        <img src="images/11filter-11.png" alt="redfilter" class="images" id="filterD">
+        <img src="images/13branches-13.png" alt="branch" class="images" id="branches">
+        <img src="images/13musicA.png" alt="music note" class="images" id="glitchmusicA">
+        <img src="images/13musicB.png" alt="music note" class="images" id="glitchmusicB">
+        <img src="images/13musicC.png" alt="music note" class="images" id="glitchmusicC">
+        <img src="images/13ghostA.png" alt="ghost" class="images" id="ghostA">
+        <img src="images/13ghostB.png" alt="ghost" class="images" id="ghostB">
+        <img src="images/13ghostC.png" alt="ghost" class="images" id="ghostC">
+        <audio id="creepy-choir" src="Creepy choir music.mp3"></audio>
+        <audio id="deep-choir" src="short-eerie-choir.wav"></audio>
+
+        <button onclick="transition14()" class="button" id="next12"></button>
+        <button onclick="transition13()" class="button" id="next11"></button>
+        <button onclick="transition12()" class="button" id="next10"></button>
+        <button onclick="transition11()" class="button" id="next9"></button>
+
+        <script type="text/javascript">
+            function transition11() {
+                document.getElementById('tentext').style.opacity = '0';
+                document.getElementById('filterB').style.display = "block";
+                document.getElementById('filterF').style.display = "block";
+                document.getElementById('eleventext').style.opacity = '1';
+                document.getElementById('ruins').style.opacity = '1';
+                document.getElementById('tenhuman').style.filter = "hue-rotate(45deg)";
+                document.getElementById('tenhuman').style.opacity = '0.8';
+                document.getElementById('next9').remove();
+                document.getElementById('next10').style.zIndex = "2";
+
+                var audio = document.getElementById("creepy-choir");
+                audio.play();
+            }
+        </script>
+
+        <script type="text/javascript">
+            function transition12() {
+                document.getElementById('eleventext').style.opacity = '0';
+                document.getElementById('filterB').remove();
+                document.getElementById('filterC').style.display = "block";
+                document.getElementById('filterG').style.display = "block";
+                document.getElementById('twelvetext').style.opacity = '1';
+                document.getElementById('tenhuman').style.filter = "contrast(50%)";
+                document.getElementById('tenhuman').style.opacity = '0.5';
+                document.getElementById('wingA').style.opacity = '1';
+                document.getElementById('wingB').style.opacity = '1';
+                document.getElementById('wingC').style.opacity = '1';
+                document.getElementById('wingD').style.opacity = '1';
+                document.getElementById('next10').remove();
+                document.getElementById('next11').style.zIndex = "2";
+
+                var audio = document.getElementById("deep-choir");
+                audio.play();
+            }
+        </script>
+
+        <script type="text/javascript">
+            function transition13() {
+                document.getElementById('twelvetext').style.opacity = '0';
+                document.getElementById('filterC').remove();
+                document.getElementById('filterD').style.display = "block";
+                document.getElementById('filterE').style.display = "block";
+                document.getElementById('thirteentext').style.opacity = '1';
+                document.getElementById('tenhuman').remove();
+                document.getElementById('next11').remove();
+                document.getElementById('next12').style.zIndex = "2";
+                document.getElementById('ghostA').style.opacity = '1';
+                document.getElementById('ghostB').style.opacity = '1';
+                document.getElementById('ghostC').style.opacity = '1';
+                document.getElementById('glitchmusicA').style.opacity = '1';
+                document.getElementById('glitchmusicB').style.opacity = '1';
+                document.getElementById('glitchmusicC').style.opacity = '1';
+                document.getElementById('branches').style.display = "block";
+            }
+        </script>
+
+        <script type="text/javascript">
+            function transition14() {
+                document.getElementById('pagetransition9').style.opacity = '0';
+                document.getElementById('next12').remove();
+                document.getElementById('next13').style.zIndex = "2";
+
+                var audio = document.getElementById("wind-ambience");
+                audio.pause();
+            }
+        </script>
+    </div>
+
+    <!--7&8&9 page-->
+    <div class="page" id="pagetransition8">
+        <img src="images/7bg-07.jpg" alt="bg" class="images">
+        <img src="images/7textA.png" alt="and the blackbirds" class="images" id="seventextA">
+        <img src="images/7textbird.png" alt="built their strict songs" class="images" id="sevenbirdtext">
+        <img src="images/7textB.png" alt="in the high pines" class="images" id="seventextB">
+        <img src="images/8text.png" alt="when the great nests...the lattice of the branches" class="images"
+            id="eighttext">
+        <img src="images/8nesttext.png" alt="swayed nest" class="images" id="eightbirdtext"> <img
+            src="images/7trees-07.png" alt="pines" class="images">
+        <img src="images/7trees-07.png" alt="pines" class="images">
+        <img src="images/7noteA.png" alt="note" class="notes" id="noteA">
+        <img src="images/7noteB.png" alt="note" class="notes" id="noteB">
+        <img src="images/7noteC.png" alt="note" class="notes" id="noteC">
+        <img src="images/7noteD.png" alt="note" class="notes" id="noteD">
+        <img src="images/7noteE.png" alt="note" class="notes" id="noteE">
+        <img src="images/7noteC.png" alt="note" class="notes" id="noteF">
+        <img src="images/7noteB.png" alt="note" class="notes" id="noteG">
+        <img src="images/7noteH.png" alt="note" class="notes" id="noteH">
+        <img src="images/9still-09.png" alt="the moon's brute music touching them with fire" class="images"
+            id="ninestill">
+        <img src="images/9moon.png" alt="moon" class="images" id="moon">
+        <img src="images/9fire-09.png" alt="moon" class="images" id="fire">
+        <audio id="fire-ambience" src="fire-ambience.flac"></audio>
+        <audio id="wind-ambience" src="wind-ambience.wav"></audio>
+
+        <div>
+            <button onclick="transition10()" class="button" id="next8"></button>
+            <button onclick="transition9()" class="button" id="next7"></button>
+            <button onclick="transition8()" class="button" id="next6"></button>
+            <script type="text/javascript">
+                function transition8() {
+                    document.getElementById('seventextA').style.transform = "rotate(180deg)";
+                    document.getElementById('seventextB').style.transform = "rotate(180deg)";
+                    document.getElementById('sevenbirdtext').style.transform = "rotate(-180deg)";
+                    document.getElementById('eighttext').style.transform = "rotate(-180deg)";
+                    document.getElementById('eightbirdtext').style.transform = "rotate(-180deg)";
+                    document.getElementById('next6').remove();
+                    document.getElementById('next7').style.zIndex = "2";
+                }
+            </script>
+            <script type="text/javascript">
+                function transition9() {
+                    document.getElementById('eighttext').style.opacity = '0';
+                    document.getElementById('eightbirdtext').style.opacity = '0';
+                    document.getElementById('fire').style.opacity = '1';
+                    document.getElementById('moon').style.opacity = '1';
+                    document.getElementById('ninestill').style.opacity = '1';
+                    document.getElementById('next7').remove();
+                    document.getElementById('next8').style.zIndex = "2";
+
+                    var audio = document.getElementById("fire-ambience");
+                    audio.play();
+                    var audio = document.getElementById("bird-chirp");
+                    audio.pause();
+                }
+            </script>
+            <script type="text/javascript">
+                function transition10() {
+                    document.getElementById('pagetransition8').style.opacity = '0';
+                    document.getElementById('next8').remove();
+                    document.getElementById('next9').style.zIndex = "2";
+                    document.getElementById('tenhuman').style.opacity = '1';
+
+                    var audio = document.getElementById("solemnpiano");
+                    audio.pause();
+                    var audio = document.getElementById("fire-ambience");
+                    audio.pause();
+                    var audio = document.getElementById("wind-ambience");
+                    audio.play();
+                }
+            </script>
+        </div>
+
+    </div>
+
+    <!--6th page-->
+    <div class="page" id="pagetransition7">
+        <img src="images/6bg-06.png" alt="bg" class="images">
+        <img src="images/6riverr-06.png" alt="red river" class="images" id="riverred">
+        <img src="images/6riverb-06.png" alt="blue river" class="images" id="riverblue">
+        <img src="images/6text-06.png" alt="when the river stripped the cover's stones from the margins" class="images">
+        <img src="images/6mountains-06.png" alt="mountains" class="images">
+        <audio loop id="bird-chirp" src="bird-chirp.wav"></audio>
+
+        <div>
+            <button onclick="transition7()" class="button" id="next5"></button>
+            <script type="text/javascript">
+                function transition7() {
+                    document.getElementById('pagetransition7').style.opacity = '0';
+                    document.getElementById('next5').remove();
+                    document.getElementById('next6').style.zIndex = "2";
+
+                    var audio = document.getElementById("bird-chirp");
+                    audio.play();
+                    var audio = document.getElementById("river-ambience");
+                    audio.pause();
+                }
+            </script>
+        </div>
+    </div>
+
+    <!--5th page-->
+    <div class="page" id="pagetransition6">
+        <img src="images/5still-05.jpg" alt="bg" class="images">
+        <img src="images/5eyes.png" alt="eyes" class="images" id="eyes">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarA">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarB">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarC">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarD">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarE">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarF">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarG">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarH">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarI">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarJ">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarK">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarL">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarM">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarN">
+        <img src="images/5star.png" alt="star" class="fivestars" id="fivestarO">
+        <audio id="river-ambience" src="river-ambience.wav"></audio>
+
+        <div>
+            <button onclick="transition6()" class="button" id="next4"></button>
+            <script type="text/javascript">
+                function transition6() {
+                    document.getElementById('pagetransition6').style.opacity = '0';
+                    document.getElementById('next4').remove();
+                    document.getElementById('next5').style.zIndex = "2";
+
+                    var audio = document.getElementById("river-ambience");
+                    audio.play();
+                    var audio = document.getElementById("glitter-sfx");
+                    audio.pause();
+                }
+            </script>
+        </div>
+    </div>
+
+    <!--4th page-->
+    <div class="page" id="pagetransition5">
+        <img src="images/4still-04.jpg" alt="bg" class="images">
+        <img src="images/4stars-04.png" alt="star" class="images" id="fourstars">
+    </div>
+
+    <div>
+        <button onclick="transition5()" class="button" id="next3"></button>
+        <script type="text/javascript">
+            function transition5() {
+                document.getElementById('pagetransition5').style.opacity = '0';
+                document.getElementById('next3').remove();
+                document.getElementById('next4').style.zIndex = "2";
+                document.getElementById('eyes').style.opacity = '1';
+            }
+        </script>
+    </div>
+
+    <!--2&3 page-->
+    <div>
+        <div class="page" id="pagetransition3">
+            <!--3rd page-->
+            <div class="page" id="pagetransition4">
+                <img src="images/3textA-03.png" alt="and drove up throught the crooked way" class="images" id="texts3A">
+                <img src="images/3textB-03.png" alt="of the valley" class="images" id="texts3B">
+                <img src="images/3car.png" alt="car" class="images" id="car">
+                <button onclick="transition4()" class="button" id="next2"></button>
+                <audio id="glitter-sfx" src="glitter-sfx.wav"></audio>
+
+                <script type="text/javascript">
+                    function transition4() {
+                        document.getElementById('pagetransition3').style.opacity = '0';
+                        document.getElementById('next3').style.zIndex = "2";
+                        document.getElementById('pagetransition5').style.opacity = '1';
+
+                        var audio = document.getElementById("glitter-sfx");
+                        audio.play();
+                        var audio = document.getElementById("car-pass");
+                        audio.pause();
+                    }
+                </script>
+
+                <!--2nd page-->
+            </div>
+            <img src="images/1bg-01.jpg" alt="bg" class="images">
+            <img src="images/2glittersB.png" alt="comets" class="images" id="glitter">
+            <img src="images/3light.png" alt="light" id="light">
+            <img src="images/2textA-02.png" alt="and I slipped off in the first light" class="images" id="textsfade">
+            <img src="images/2textB-02.png" alt="or its last hour" class="images" id="textsfade2">
+            <img src="images/2humanB.png" alt="human" class="images" id="humanslide">
+
+            <button onclick="transition3()" class="button" id="next"></button>
+            <script type="text/javascript">
+                function transition3() {
+                    document.getElementById('light').style.transform = "rotate(-33deg)";
+                    document.getElementById('textsfade').style.opacity = '0';
+                    document.getElementById('textsfade2').style.opacity = '0';
+                    document.getElementById('humanslide').style.opacity = '0';
+                    document.getElementById('glitter').style.transform = 'scaleX(-1)';
+                    document.getElementById('pagetransition4').style.opacity = '1';
+                    document.getElementById('pagetransition4').style.zIndex = "1";
+                    document.getElementById('next').remove();
+
+                }
+            </script>
+        </div>
+    </div>
+
+    <!--1st page-->
+    <div class="page" id="pagetransition2">
+        <img src="images/1still-01.jpg" alt="bg" class="images">
+        <img src="images/1hourB.png" alt="hour" class="images" id="hour">
+        <img src="images/1minuteB.png" alt="minute" class="images" id="minute">
+        <div id="circle"></div>
+        <audio id="car-pass" src="car-pass.wav"></audio>
+
+        <button onclick="transition2()" class="button" id="next"></button>
+        <script type="text/javascript">
+            function transition2() {
+                document.getElementById('pagetransition2').style.opacity = '0';
+                document.getElementById('humanslide').style.opacity = '1';
+
+                var audio = document.getElementById("ticking-clock");
+                audio.pause();
+                var audio = document.getElementById("car-pass");
+                audio.play();
+            }
+        </script>
+    </div>
+
+    <!--cover page-->
+    <div class="page" id="pagetransition">
+        <img src="images/0bg-15.jpg" alt="HERMITAGE" class="images">
+        <img src="images/0human-15.png" alt="someone" class="images" id="humanmove">
+        <audio id="solemnpiano" src="Solemn Atmosphere.mp3"></audio>
+        <audio loop id="ticking-clock" src="ticking-clock.wav"></audio>
+    </div>
+    <!--button-->
+    <div>
+        <button onclick="transition()" class="button" id="start"></button>
+        <script type="text/javascript">
+            function transition() {
+                document.getElementById('pagetransition').style.opacity = '0';
+                document.getElementById('start').style.opacity = '0';
+                document.getElementById('hour').style.opacity = '1';
+                document.getElementById('minute').style.opacity = '1';
+                document.getElementById('next').style.opacity = '1';
+
+                var audio = document.getElementById("solemnpiano");
+                audio.play();
+                var audio = document.getElementById("ticking-clock");
+                audio.play();
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

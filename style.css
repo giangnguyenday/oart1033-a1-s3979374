@@ -1,0 +1,932 @@
+body {
+    background-color: #211429;
+    max-height: 2180px;
+}
+
+button {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    cursor: pointer;
+}
+
+.body {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+.page {
+    position: relative;
+}
+
+.images {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.button {
+    width: 13%;
+    height: auto;
+    position: fixed;
+}
+
+.button:hover {
+    mix-blend-mode: screen;
+}
+
+.fivestars {
+    width: 30px;
+    position: absolute;
+}
+
+.notes {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    animation: notes 1s linear 0s infinite;
+}
+
+#start {
+    background: url(images/0startbutton-16.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 44%;
+    bottom: 10%;
+}
+
+#next {
+    opacity: 0;
+    z-index: 1;
+    background: url(images/next-16.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 0%;
+    top: 0%;
+    transition: 1s;
+}
+
+#next2 {
+    opacity: 1;
+    z-index: 2;
+    background: url(images/next-16.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 0%;
+    top: 0%;
+}
+
+#next3,
+#next4,
+#next5,
+#next6,
+#next7,
+#next8,
+#next9,
+#next10,
+#next11,
+#next12,
+#next13,
+#next14 {
+    background: url(images/next-16.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 0%;
+    top: 0%;
+}
+
+#pagetransition,
+#pagetransition2,
+#pagetransition3,
+#pagetransition5,
+#pagetransition6,
+#pagetransition7,
+#pagetransition8,
+#pagetransition9,
+#pagetransition10,
+#pagetransition11 {
+    transition: 1s;
+}
+
+#pagetransition4 {
+    opacity: 0;
+    transition: 1s;
+}
+
+#humanmove {
+    animation: humanfloat 2s ease-in-out infinite alternate;
+}
+
+#circle {
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+    background-color: #211429;
+    position: absolute;
+    top: 470px;
+    left: 835px;
+}
+
+#hour {
+    opacity: 0;
+    z-index: 1;
+    height: 270px;
+    top: 258px;
+    left: 722px;
+    transform-origin: 90% 92%;
+    animation: hourrotate 20s linear infinite;
+    transition: 1s;
+}
+
+#hour:hover, #minute:hover {
+    animation-play-state: paused;
+    mix-blend-mode: color-dodge;
+    filter: hue-rotate(45deg);
+    filter: saturate(10);
+}
+
+#minute {
+    opacity: 0;
+    z-index: 1;
+    height: 170px;
+    top: 502px;
+    right: 530px;
+    transform-origin: 0% 2%;
+    animation: minuterotate 5s linear infinite;
+    transition: 1s;
+}
+
+#glitter {
+    max-width: 110%;
+    animation-name: glittermove;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+#humanslide {
+    height: 150px;
+    animation-name: humanslide;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: 0.5s;
+}
+
+#light {
+    position: absolute;
+    rotate: 16.2deg;
+    width: 2100px;
+    top: 573px;
+    left: -200px;
+    transition: 1s;
+}
+
+#textsfade {
+    transition: 1s;
+    top: -6px;
+}
+
+#textsfade2 {
+    left: -15px;
+    transition: 1s;
+    top: -6px;
+}
+
+#texts3A {
+    top: -28px;
+    rotate: -0.5deg;
+}
+
+#texts3B {
+    top: -23px;
+    left: -10px;
+    rotate: -0.3deg;
+}
+
+#car {
+    rotate: -3deg;
+    height: 180px;
+    animation: carslide 3s linear infinite;
+    transition: 1s;
+}
+
+#fourstars {
+    animation: fourstars 2s ease infinite;
+}
+
+#eyes {
+    opacity: 0;
+    z-index: 1;
+    top: 870px;
+    left: 8.5px;
+}
+
+#eyes:hover {
+    filter: brightness(300%);
+    filter: hue-rotate(45deg);
+    mix-blend-mode: screen;
+}
+
+#riverblue {
+    animation: riverblue 2s ease 0s infinite;
+}
+
+#riverred {
+    animation: riverblue 2s ease 1s infinite;
+}
+
+#seventextA {
+    height: 60px;
+    left: 315px;
+    top: 100px;
+}
+
+#seventextB {
+    height: 75px;
+    left: 515px;
+    top: 850px;
+}
+
+#sevenbirdtext {
+    height: 720px;
+    right: 350px;
+    top: 165px;
+}
+
+#seventextA, #seventextB {
+    transform-origin: 0% 80%;
+    transition: 2s;
+    transition-timing-function: ease-out;
+}
+
+#sevenbirdtext {
+    transform-origin: 120% 100%;
+    transition: 2s;
+    transition-timing-function: ease-out;
+}
+
+#eightbirdtext {
+    width: 860px;
+    left: 450px;
+    top: 240px;
+    transform-origin: -10% 30%;
+    rotate: 180deg;
+    transition: 1.5s;
+    transition-timing-function: ease-out;
+}
+
+#eighttext {
+    width: 600px;
+    left: 360px;
+    top: 110px;
+    transform-origin: 0% 40%;
+    rotate: 180deg;
+    transition: 1.5s;
+    transition-timing-function: ease-out;
+}
+
+#moon {
+    opacity: 0;
+    z-index: 1;
+    height: 300px;
+    right: 430px;
+    top: 20px;
+    transition: 1s;
+}
+
+#moon:hover {
+    filter: brightness(150%);
+    filter: saturate(20);
+}
+
+#fire {
+    opacity: 0;
+    transition: 1s;
+    animation: fire 1s ease infinite;
+}
+
+#ninestill {
+    opacity: 0;
+    transition: 1s;
+}
+
+#tenfilter {
+    position: absolute;
+    background-color: #4d3051;
+    opacity: 58%;
+    mix-blend-mode: color-burn;
+    width: 100%;
+    height: 1100px;
+}
+
+#clouds {
+    position: absolute;
+    height: 1100px;
+    animation: clouds 3s linear infinite;
+}
+
+#tenhuman {
+    opacity: 0;
+    z-index: 1;
+    width: 120px;
+    top: 670px;
+    right: 200px;
+    transition: 0.5s;
+}
+
+#tenhuman:hover {
+    top: 560px;
+    mix-blend-mode: screen;
+    filter: brightness(180%);
+}
+
+#tentext {
+    transition: 0.5s;
+}
+
+#filterB {
+    display: none;
+    mix-blend-mode: color-burn;
+    transition: 0.5s;
+    animation: filterB 1s ease-in infinite;
+}
+
+#filterC {
+    display: none;
+    mix-blend-mode: color-burn;
+    transition: 0.5s;
+    animation: filterC 0.8s ease-in infinite;
+}
+
+#filterD {
+    display: none;
+    mix-blend-mode: color-burn;
+    transition: 0.5s;
+    animation: filterD 0.5s ease-in infinite;
+}
+
+#filterE {
+    display: none;
+    mix-blend-mode: color-burn;
+    transition: 0.2s;
+    opacity: 1;
+    filter: brightness(30%)
+}
+
+#filterF {
+    display: none;
+    mix-blend-mode: color-burn;
+    transition: 0.2s;
+    opacity: 0.2;
+    filter: brightness(30%)
+}
+
+#filterG {
+    display: none;
+    mix-blend-mode: color-burn;
+    transition: 0.2s;
+    opacity: 0.5;
+    filter: brightness(30%)
+}
+
+#twelvetext {
+    opacity: 0;
+    top: -20px;
+    transition: 0.5s;
+}
+
+#eleventext, #thirteentext, #ruins {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#wingA {
+    opacity: 0;
+    width: 480px;
+    top: -10px;
+    left: -5px;
+    transition: 0.5s;
+    filter: brightness(50%);
+    animation: wingA 0.6s ease-in-out infinite alternate;
+}
+
+#wingB {
+    opacity: 0;
+    width: 680px;
+    top: 400px;
+    left: -220px;
+    transition: 0.5s;
+    filter: brightness(50%);
+    animation: wingB 0.5s ease-in-out 1s infinite alternate;
+}
+
+#wingC {
+    opacity: 0;
+    width: 580px;
+    top: -20px;
+    right: 40px;
+    transition: 0.5s;
+    filter: brightness(50%);
+    animation: wingC 1s ease-in-out 2s infinite alternate;
+}
+
+#wingD {
+    opacity: 0;
+    width: 640px;
+    top: 400px;
+    right: -50px;
+    transition: 0.5s;
+    filter: brightness(50%);
+    animation: wingD 0.6s ease-in-out 0.5s infinite alternate;
+}
+
+#ghostA {
+    opacity: 0;
+    width: 450px;
+    right: 150px;
+    top: 650px;
+    animation: shake 0.1s linear infinite;
+    transition: 0.5s;
+}
+
+#ghostB {
+    opacity: 0;
+    width: 580px;
+    left: 150px;
+    top: -50px;
+    animation: shake 0.1s linear 0.1s infinite;
+    transition: 0.5s;
+}
+
+#ghostC {
+    opacity: 0;
+    width: 270px;
+    left: -50px;
+    top: 500px;
+    animation: shake 0.1s linear infinite;
+    transition: 0.5s;
+}
+
+#branches {
+    display: none;
+    mix-blend-mode: screen;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+#glitchmusicA {
+    opacity: 0;
+    width: 250px;
+    top: 70px;
+    right: 380px;
+    filter: brightness(200%);
+    animation: shake 0.1s linear infinite;
+    transition: 0.5s;
+}
+
+#glitchmusicB {
+    opacity: 0;
+    width: 200px;
+    top: 200px;
+    right: 80px;
+    animation: shake 0.1s linear 0.1s infinite;
+    transition: 0.5s;
+}
+
+#glitchmusicC {
+    opacity: 0;
+    width: 150px;
+    top: 680px;
+    left: 550px;
+    animation: shake 0.1s linear 0.1s infinite;
+    transition: 0.5s;
+}
+
+#noteA {
+    height: 25px;
+    top: 115px;
+    left: 86px;
+    mix-blend-mode: overlay;
+    opacity: 50%;
+    animation: notes 1s linear 0s infinite;
+
+}
+
+#noteB {
+    height: 70px;
+    top: 315px;
+    left: 45px;
+    mix-blend-mode: color-dodge;
+    animation-delay: 0.6s;
+}
+
+#noteC {
+    height: 100px;
+    top: 620px;
+    left: 110px;
+    mix-blend-mode: color-dodge;
+    animation-delay: 0.4s;
+}
+
+#noteD {
+    height: 100px;
+    top: 820px;
+    left: 330px;
+    mix-blend-mode: color-dodge;
+    animation-delay: 0.8s;
+}
+
+#noteE {
+    height: 80px;
+    top: 120px;
+    right: 145px;
+    mix-blend-mode: hard-light;
+    opacity: 50%;
+    animation-delay: 0.6s;
+}
+
+#noteF {
+    height: 45px;
+    top: 370px;
+    right: 80px;
+    mix-blend-mode: color-dodge;
+    rotate: 180deg;
+    opacity: 50%;
+    animation-delay: 0.2s;
+}
+
+#noteG {
+    height: 95px;
+    top: 480px;
+    right: 200px;
+    mix-blend-mode: color-dodge;
+    opacity: 70%;
+    animation-delay: 0s;
+}
+
+#noteH {
+    height: 100px;
+    top: 760px;
+    right: 140px;
+    mix-blend-mode: color-dodge;
+    opacity: 80%;
+    animation-delay: 0.2s;
+}
+
+#fivestarA {
+    top: 270px;
+    left: 970px;
+    animation: fivestar 3s linear 0s infinite;
+}
+
+#fivestarB {
+    top: 330px;
+    left: 885px;
+    animation: fivestar 3s linear 0.2s infinite;
+}
+
+#fivestarC {
+    top: 420px;
+    left: 825px;
+    animation: fivestar 3s linear 0.4s infinite;
+}
+
+#fivestarD {
+    top: 470px;
+    left: 730px;
+    animation: fivestar 3s linear 0.6s infinite;
+}
+
+#fivestarE {
+    top: 440px;
+    left: 640px;
+    animation: fivestar 3s linear 0.8s infinite;
+}
+
+#fivestarF {
+    top: 375px;
+    left: 580px;
+    animation: fivestar 3s linear 1s infinite;
+}
+
+#fivestarG {
+    top: 360px;
+    left: 480px;
+    animation: fivestar 3s linear 1.2s infinite;
+}
+
+#fivestarH {
+    top: 420px;
+    left: 400px;
+    animation: fivestar 3s linear 1.4s infinite;
+}
+
+#fivestarI {
+    top: 510px;
+    left: 380px;
+    animation: fivestar 3s linear 1.6s infinite;
+}
+
+#fivestarJ {
+    top: 600px;
+    left: 370px;
+    animation: fivestar 3s linear 1.8s infinite;
+}
+
+#fivestarK {
+    top: 690px;
+    left: 370px;
+    animation: fivestar 3s linear 2s infinite;
+}
+
+#fivestarL {
+    top: 780px;
+    left: 350px;
+    animation: fivestar 3s linear 2.2s infinite;
+}
+
+#fivestarM {
+    top: 630px;
+    left: 500px;
+    animation: fivestar 3s linear 1.8s infinite;
+}
+
+#fivestarN {
+    top: 710px;
+    left: 520px;
+    animation: fivestar 3s linear 2s infinite;
+}
+
+#fivestarO {
+    top: 790px;
+    left: 490px;
+    animation: fivestar 3s linear 2.2s infinite;
+}
+
+@keyframes humanfloat {
+
+    from {
+        top: -3px;
+    }
+
+    to {
+        top: 20px;
+    }
+}
+
+@keyframes hourrotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: -360deg;
+    }
+}
+
+@keyframes minuterotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: -360deg;
+    }
+}
+
+@keyframes glittermove {
+    0% {
+        opacity: 1;
+        left: -30px;
+
+    }
+
+    30% {
+        opacity: 0;
+        left: -80px;
+    }
+
+    100% {
+        opacity: 1;
+        left: -30px;
+    }
+}
+
+@keyframes humanslide {
+    0% {
+        left: -400px;
+        top: 175px;
+    }
+
+    100% {
+        left: 1800px;
+        top: 815px
+    }
+}
+
+@keyframes carslide {
+    0% {
+        left: -300px;
+        top: 760px;
+    }
+
+    100% {
+        left: 1800px;
+        top: 145px
+    }
+}
+
+@keyframes fourstars {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes fivestar {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes riverblue {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes notes {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fire {
+    0% {
+        filter: brightness(100%);
+        filter: saturate(1);
+    }
+
+    70% {
+        filter: brightness(150%);
+        filter: saturate(2);
+    }
+
+    100% {
+        filter: brightness(100%);
+        filter: saturate(1);
+    }
+}
+
+@keyframes clouds {
+    0% {
+        opacity: 0;
+        right: -140px;
+    }
+
+    20% {
+        opacity: 1;
+        right: -110px;
+    }
+
+    80% {
+        opacity: 1;
+        right: -60px;
+    }
+
+    100% {
+        opacity: 0;
+        right: -40px;
+    }
+}
+
+@keyframes filterB {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes filterC {
+    0% {
+        opacity: 0.2;
+    }
+
+    30% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes wingA {
+    from {
+        top: -30px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes wingB {
+    from {
+        top: 340px;
+    }
+
+    to {
+        top: 400px;
+    }
+}
+
+@keyframes wingC {
+    from {
+        top: -50px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes wingD {
+    from {
+        top: 430px;
+    }
+
+    to {
+        top: 500px;
+    }
+}
+
+@keyframes filterD {
+    0% {
+        opacity: 0.6;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes shake {
+    from {
+        rotate: 10deg
+    }
+
+    to {
+        rotate: -5deg
+    }
+}
